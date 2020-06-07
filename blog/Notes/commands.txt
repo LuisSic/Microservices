@@ -1,0 +1,2 @@
+kubectl rollout restart deployment event-bus-depl
+Use for update deployment when we have new version of docker image

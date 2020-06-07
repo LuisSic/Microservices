@@ -1,0 +1,7 @@
+Cluster IP: Sets up an easy to remenber URL to access a pod. Only exposes pods in the Cluster
+Node Port: Makes a post accessible from outside the cluster.
+            Usually only used for dev purposes
+Load Balancer: Makes a pod accessible from outside the cluster. This
+               is the rigth way to expose a pod to the outside world
+External Name: Redirects an in-cluster request to a CNAME url...
+
