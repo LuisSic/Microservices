@@ -1,6 +1,5 @@
 import request from 'supertest';
 import { app } from '../../app';
-import { response } from 'express';
 
 it('returns a 201 on succesful signup', async () => {
   await request(app)
