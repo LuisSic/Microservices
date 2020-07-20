@@ -15,6 +15,9 @@ spec:
       containers:
         - name: orders
           image: sluis117/orders
+          volumeMounts:
+            - mountPath: /etc/localtime
+              name: tz-gt
           env:
             - name: NATS_CLIENT_ID
               valueFrom:
@@ -31,6 +34,11 @@ spec:
                   key: JWT_KEY
             - name: MONGO_URL
               value: 'mongodb://orders-mongo-srv:27017/orders'
+      volumes:
+        - name: tz-gt
+          hostPath:
+            path: /usr/share/zoneinfo/America/Guatemala
+
 ---
 apiVersion: v1
 kind: Service
